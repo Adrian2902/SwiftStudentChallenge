@@ -5,21 +5,30 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            VStack(spacing: 30) {
-                Text("\n\n\nCultureScope")
-                    .font(.system(size: 35, weight: .bold, design: .monospaced))
-                    .fontWeight(.black)
-                    .multilineTextAlignment(.center)
-                    .padding()
-                                    
-                NavigationLink("View Cultural Map", destination: MapView())
-                    .buttonStyle(MainButtonStyle())
+            ZStack(){
+                Image("fondoMundo")
+                    .resizable()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
                 
-                NavigationLink("Cultural Trivia Game", destination: TriviaView())
-                    .buttonStyle(MainButtonStyle())
-                
-                Spacer()
+                VStack(spacing: 25) {
+                    Text("\n\n\nCultureScope")
+                        .font(.system(size: 35, weight: .bold, design: .monospaced))
+                        .fontWeight(.black)
+                        .multilineTextAlignment(.center)
+                        .padding(50)
+                    
+                    NavigationLink("View Cultural Map", destination: MapView())
+                        .buttonStyle(MainButtonStyle())
+                    
+                    NavigationLink("Cultural Trivia Game", destination: TriviaView())
+                        .buttonStyle(MainButtonStyle())
+                    
+                    Spacer()
+                }
+                .padding()
             }
+            
         }
     }
 }
