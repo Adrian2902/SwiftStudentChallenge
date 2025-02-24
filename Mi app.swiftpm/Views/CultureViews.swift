@@ -6,17 +6,6 @@
 //
 import SwiftUI
 
-struct CultureModel {
-    let name: String
-    let imageName: String
-    let description: String
-    let flag: String
-    
-    var nameWithFlag: String {
-        return "\(name) \(flag)"
-    }
-}
-
 struct CultureView: View {
     let cultureModel: CultureModel
     

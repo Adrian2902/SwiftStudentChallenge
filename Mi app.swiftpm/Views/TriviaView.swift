@@ -61,7 +61,7 @@ struct TriviaView: View {
                         .foregroundColor(.green)
                 } else {
                     Text("Oops! The correct answer is \(correctAnswer).")
-                        .font(.title)
+                        .font(.title).bold()
                         .foregroundColor(.red)
                 }
                 if model.currentQuestion < 4 {

@@ -15,16 +15,24 @@ struct ResultsView: View {
     init(finalScore: Int, wasFinalAnswerCorrect: Bool) {
         self.finalScore = finalScore + (wasFinalAnswerCorrect ? 1 : 0)
     }
-
+    
     var body: some View {
-        Text("Your final Score was \(finalScore)")
-            .navigationBarBackButtonHidden(true)
-        NavigationLink("Go Home", destination: {
-            ContentView()
-        })
-        .buttonStyle(.borderedProminent)
-        .controlSize(.extraLarge)
-        .foregroundColor(.newSecondaryColor)
-        .font(.system(size: 20, weight: .black))
+        ZStack{
+            Color.newTertiaryColor
+                .ignoresSafeArea()
+            VStack{
+                Text("Your final Score was \(finalScore)")
+                    .navigationBarBackButtonHidden(true)
+                    .font(.system(size: 50, weight: .bold))
+                    .foregroundColor(.newSecondaryColor)
+                NavigationLink("Go Home", destination: {
+                    ContentView()
+                })
+                .buttonStyle(.borderedProminent)
+                .controlSize(.extraLarge)
+                .foregroundColor(.newSecondaryColor)
+                .font(.system(size: 20, weight: .black))
+            }
+        }
     }
 }
