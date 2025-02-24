@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "freepik__india-map-crafted-from-various-spices-turmeric-chi__14043.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
